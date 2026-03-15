@@ -61,7 +61,7 @@ class SmartPocketApp extends StatelessWidget {
             fillColor: Colors.grey[50],
             contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
           ),
-          cardTheme: CardTheme(
+          cardTheme: CardThemeData(
             color: Colors.white,
             elevation: 2,
             shape: RoundedRectangleBorder(

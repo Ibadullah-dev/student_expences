@@ -47,7 +47,7 @@ class ProfileScreen extends StatelessWidget {
                   ),
                   child: CircleAvatar(
                     radius: 50,
-                    backgroundColor: const Color(0xFF1976D2).withOpacity(0.1),
+                    backgroundColor: const Color(0xFF1976D2).withValues(alpha: 0.1),
                     child: Text(
                       user?.name.isNotEmpty == true ? user!.name[0].toUpperCase() : 'S',
                       style: const TextStyle(
@@ -84,7 +84,7 @@ class ProfileScreen extends StatelessWidget {
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
               decoration: BoxDecoration(
-                color: const Color(0xFF1976D2).withOpacity(0.1),
+                color: const Color(0xFF1976D2).withValues(alpha: 0.1),
                 borderRadius: BorderRadius.circular(20),
               ),
               child: const Text('STUDENT PLAN',
@@ -177,8 +177,8 @@ class ProfileScreen extends StatelessWidget {
                           style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
                       style: OutlinedButton.styleFrom(
                         padding: const EdgeInsets.symmetric(vertical: 16),
-                        side: BorderSide(color: Colors.red.withOpacity(0.3)),
-                        backgroundColor: Colors.red.withOpacity(0.05),
+                        side: BorderSide(color: Colors.red.withValues(alpha: 0.3)),
+                        backgroundColor: Colors.red.withValues(alpha: 0.05),
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
                       ),
                     ),
@@ -227,7 +227,7 @@ class ProfileScreen extends StatelessWidget {
         leading: Container(
           padding: const EdgeInsets.all(10),
           decoration: BoxDecoration(
-            color: color.withOpacity(0.1),
+            color: color.withValues(alpha: 0.1),
             borderRadius: BorderRadius.circular(12),
           ),
           child: Icon(icon, color: color),

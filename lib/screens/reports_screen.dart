@@ -97,7 +97,7 @@ class _ReportsScreenState extends State<ReportsScreen> {
                                   final idx = value.toInt();
                                   if (idx < 0 || idx >= dayLabels.length) return const SizedBox();
                                   return SideTitleWidget(
-                                    axisSide: meta.axisSide,
+                                    meta: meta,
                                     child: Text(dayLabels[idx],
                                         style: const TextStyle(color: Colors.grey, fontSize: 11)),
                                   );
@@ -112,7 +112,7 @@ class _ReportsScreenState extends State<ReportsScreen> {
                             show: true,
                             drawVerticalLine: false,
                             getDrawingHorizontalLine: (v) =>
-                                FlLine(color: Colors.grey.withOpacity(0.2), strokeWidth: 1),
+                                FlLine(color: Colors.grey.withValues(alpha: 0.2), strokeWidth: 1),
                           ),
                           borderData: FlBorderData(show: false),
                           barGroups: List.generate(7, (i) => _makeBar(i, dailyTotals[i])),
@@ -193,10 +193,10 @@ class _ReportsScreenState extends State<ReportsScreen> {
                 ),
               )
             else
-              Card(
+              const Card(
                 child: Padding(
-                  padding: const EdgeInsets.all(32),
-                  child: const Center(
+                  padding: EdgeInsets.all(32),
+                  child: Center(
                     child: Column(
                       children: [
                         Icon(Icons.pie_chart, size: 48, color: Colors.grey),
