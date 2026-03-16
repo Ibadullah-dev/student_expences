@@ -192,12 +192,6 @@ The mobile application includes the following screens:
 • Reports Screen
 • Profile Screen
 
----
-
-# Screenshots
-
-
----
 
 # Project Structure
 
